@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import { errorHandler } from './middleware/errorHandler';
 import qrRoutes from './routes/qr';
 import imageRoutes from './routes/image';
 import utilsRoutes from './routes/utils';
@@ -29,6 +30,8 @@ app.use('/api/media', mediaRoutes);
 app.use('/api/ai', aiRoutes);
 app.use('/api/shortener', shortenerRoutes);
 app.use('/api/currency', currencyRoutes);
+
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

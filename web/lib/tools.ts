@@ -27,17 +27,6 @@ export const categories: Category[] = [
     ],
   },
   {
-    id: 'ai',
-    name: 'AI Tools',
-    icon: 'Sparkles',
-    gradient: 'from-violet-500 to-indigo-600',
-    tools: [
-      { id: 'ai-summarizer', name: 'AI Summarizer', description: 'Paste any long article and get a short summary', icon: 'BookOpen', gradient: 'from-violet-400 to-indigo-600', href: '/tools/ai-summarizer', badge: 'ai', available: true },
-      { id: 'grammar-fixer', name: 'Grammar Fixer', description: 'Fix grammar, spelling, and punctuation instantly', icon: 'SpellCheck', gradient: 'from-green-400 to-emerald-600', href: '/tools/grammar-fixer', badge: 'ai', available: true },
-      { id: 'rewrite-text', name: 'Rewrite Text', description: 'Rephrase any text in a more professional tone', icon: 'PenLine', gradient: 'from-indigo-400 to-violet-600', href: '/tools/rewrite-text', badge: 'ai', available: true },
-    ],
-  },
-  {
     id: 'student',
     name: 'Student Tools',
     icon: 'GraduationCap',
@@ -69,7 +58,6 @@ export const categories: Category[] = [
     gradient: 'from-pink-400 to-purple-600',
     tools: [
       { id: 'tiktok-downloader', name: 'TikTok Downloader', description: 'Download TikTok videos without a watermark', icon: 'Music2', gradient: 'from-gray-700 to-gray-900', href: '/tools/tiktok-downloader', available: true },
-      { id: 'hashtag-generator', name: 'Hashtag Generator', description: 'Find the best hashtags for your post or niche', icon: 'Hash', gradient: 'from-blue-400 to-indigo-600', href: '/tools/hashtag-generator', badge: 'ai', available: true },
       { id: 'link-shortener', name: 'Link Shortener', description: 'Turn any long URL into a short, clean link', icon: 'Link', gradient: 'from-teal-400 to-cyan-600', href: '/tools/link-shortener', available: true },
     ],
   },

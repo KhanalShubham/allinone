@@ -7,7 +7,6 @@ import imageRoutes from './routes/image';
 import utilsRoutes from './routes/utils';
 import pdfRoutes from './routes/pdf';
 import mediaRoutes from './routes/media';
-import aiRoutes from './routes/ai';
 import shortenerRoutes from './routes/shortener';
 import currencyRoutes from './routes/currency';
 
@@ -27,7 +26,6 @@ app.use('/api/image', imageRoutes);
 app.use('/api/utils', utilsRoutes);
 app.use('/api/pdf', pdfRoutes);
 app.use('/api/media', mediaRoutes);
-app.use('/api/ai', aiRoutes);
 app.use('/api/shortener', shortenerRoutes);
 app.use('/api/currency', currencyRoutes);
 

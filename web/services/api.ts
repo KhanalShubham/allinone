@@ -103,19 +103,6 @@ export const getYouTubeThumbnail = (url: string) =>
     `/api/media/thumbnail?url=${encodeURIComponent(url)}`,
   );
 
-// --- AI ---
-export const summarize = (text: string) =>
-  post<{ summary: string }>('/api/ai/summarize', { text });
-
-export const fixGrammar = (text: string) =>
-  post<{ corrected: string; original: string }>('/api/ai/grammar', { text });
-
-export const rewriteText = (text: string, tone: string) =>
-  post<{ rewritten: string }>('/api/ai/rewrite', { text, tone });
-
-export const generateHashtags = (topic: string, platform: string) =>
-  post<{ hashtags: string[] }>('/api/ai/hashtags', { topic, platform });
-
 // --- Link Shortener ---
 export const createShortLink = (url: string) =>
   post<{ code: string; shortUrl: string }>('/api/shortener/create', { url });

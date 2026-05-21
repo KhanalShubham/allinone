@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: turuntai-api-prod
+    runtime: node
+    region: oregon
+    branch: main
+    rootDir: server
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: FRONTEND_URL
+        sync: false
+
+  - type: web
+    name: turuntai-api-staging
+    runtime: node
+    region: oregon
+    branch: dev
+    rootDir: server
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: staging
+      - key: PORT
+        value: 4000
+      - key: FRONTEND_URL
+        sync: false

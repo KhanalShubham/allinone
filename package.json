@@ -1,0 +1,9 @@
+{
+  "name": "turuntai",
+  "private": true,
+  "scripts": {
+    "dev:web": "cd web && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "install:all": "cd web && npm install && cd ../server && npm install"
+  }
+}

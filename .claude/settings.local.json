@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Set-Content *)",
+      "PowerShell(Get-ChildItem \"E:\\\\turuntai\\\\web\" -Recurse -File | Where-Object { $_.FullName -notmatch \"node_modules\" } | Select-Object FullName)",
+      "PowerShell(Copy-Item *)",
+      "PowerShell(Get-ChildItem \"E:\\\\turuntai\" -Recurse -File | Where-Object { $_.FullName -notmatch \"node_modules|\\\\.next\" } | Select-Object -ExpandProperty FullName)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pkill -f \"ts-node-dev\")",
+      "Bash(ls /mnt/)",
+      "Read(//e//**)",
+      "Bash(timeout 60 bash -c 'until curl -sf http://localhost:3000 > /dev/null 2>&1; do sleep 2; done')",
+      "Bash(curl -sf http://localhost:4000/health)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Read(//usr/**)",
+      "Bash(npm list *)",
+      "Bash(npx playwright *)",
+      "Bash(node screenshot.js)",
+      "Bash(npm install *)",
+      "Bash(node *)",
+      "Bash(curl -sf http://localhost:3000)",
+      "WebSearch",
+      "Bash(npx tsc *)",
+      "Bash(timeout 25 bash -c 'until curl -sf http://localhost:3000 > /dev/null 2>&1; do sleep 1; done')",
+      "Bash(New-Item -ItemType Directory -Force -Path \"E:\\\\turuntai\\\\web\\\\app\\\\tools\\\\age-calculator\")",
+      "Bash(Out-Null)",
+      "Bash(wait)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('exports:', list\\(d.get\\('exports',{}\\).keys\\(\\)\\)[:5]\\); print\\('main:', d.get\\('main',''\\)\\); print\\('module:', d.get\\('module',''\\)\\)\")",
+      "Bash(python *)",
+      "PowerShell(ls \"E:\\\\turuntai\\\\web\\\\app\\\\tools\\\\\" | Where-Object { $_.Name -in @\\('youtube-mp3','youtube-mp4','thumbnail-downloader','gif-maker','tiktok-downloader','ai-summarizer','grammar-fixer','rewrite-text','hashtag-generator'\\) } | Select-Object Name, LastWriteTime)"
+    ]
+  }
+}

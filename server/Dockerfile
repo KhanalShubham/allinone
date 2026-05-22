@@ -1,7 +1,7 @@
 FROM node:20-slim AS builder
 WORKDIR /app
 COPY package*.json tsconfig.json ./
-RUN npm ci
+RUN YOUTUBE_DL_SKIP_DOWNLOAD=true npm ci
 COPY src ./src
 RUN npm run build
 
@@ -19,7 +19,7 @@ RUN curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp \
 
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN YOUTUBE_DL_SKIP_DOWNLOAD=true npm ci --omit=dev
 COPY --from=builder /app/dist ./dist
 
 ENV NODE_ENV=production
